@@ -58,8 +58,6 @@ The tile view is a great opportunity to show each tiles progress for each tile.
 This one is a big oversight. If you have a typo in your query, the program just stops. Error handling should be somewhat easy to implement in the future and is necessary for dealing with unsuccesful segments. 
 ###  Implement dynamic segment size
 It doesn't make any sense to have the same segment size over oceans and in city centers. Options for dynamic tile sizes based on node density would be very useful, but that is above my paygrade at this point. 
-### Handle aborting file path selection
-When running the query, don't abort in the file dialog. Just don't. Yet. 
 
 
 If you're interested in any of these issues or other possible features feel free to contribute, open an issue or write me on Mastodon! 
