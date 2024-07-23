@@ -50,6 +50,11 @@ def runquery(): #runs query
     global runbutton
     global globalsearch
 
+    # select output file path
+    file_path = ""
+    file_path = filedialog.asksaveasfilename(title="Select path for geojson output file", filetypes=[("GeoJSON", "*.geojson")], defaultextension=".geojson")
+    if file_path == "":
+        return 0
 
     #deactivate input ui elements
     moreoptionscheckbox.config(state="disabled")
@@ -62,9 +67,6 @@ def runquery(): #runs query
     segmentnumberspinbox.config(state="disabled")
     showsegmentscheckbox.config(state="disabled")
     runbutton.config(state="disabled")
-
-    # select output file path
-    file_path = filedialog.asksaveasfilename(title="Select path for geojson output file", filetypes=[("GeoJSON", "*.geojson")], defaultextension=".geojson")
 
     # creates empty FeatureCollection to add features for each segment to
     feature_collection = geojson.FeatureCollection([])
